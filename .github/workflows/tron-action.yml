@@ -38,8 +38,8 @@ jobs:
         uses: actions-js/push@master
         with:
           github_token: ${{ secrets.PUBLISH_TOKEN }}
-          branch: 'main1'
+          branch: 'main'
           force: true
-          repository: 'MrWang6w/myAirport'
-          directory: "./get"
+          repository: 'MrWang6w/airport'
+          directory: "airport"
           
