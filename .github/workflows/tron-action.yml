@@ -48,6 +48,7 @@ jobs:
           force: true
           amend: true
           repository: 'MrWang6w/airport'
+          directory: 'get/'
 
 
           
