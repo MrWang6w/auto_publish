@@ -48,7 +48,7 @@ jobs:
           force: true
           amend: true
           repository: 'MrWang6w/airs'
-          directory: '/get/'
+          directory: 'get'
 
 
           
