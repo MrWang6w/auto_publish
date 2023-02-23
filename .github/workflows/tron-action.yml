@@ -44,11 +44,11 @@ jobs:
         uses: actions-js/push@master
         with:
           github_token: ${{ secrets.PUBLISH_TOKEN }}
-          branch: 'main'
+          branch: 'update'
           force: true
           amend: true
-          repository: 'MrWang6w/airTest'
-          directory: './get/'
+          repository: 'MrWang6w/airs'
+          directory: '/get/'
 
 
           
