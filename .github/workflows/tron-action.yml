@@ -47,8 +47,8 @@ jobs:
           branch: 'update'
           force: true
           amend: true
-          repository: 'MrWang6w/airs'
-          directory: 'get'
+          repository: 'MrWang6w/air22'
+          directory: 'get/'
 
 
           
