@@ -33,10 +33,9 @@ jobs:
       - name: run to check
         run: npm run start
 
-      - name: Commit & Push
-        run: |
-         rm -f !(get) 
-            
+      - name: detele
+        run: rm -f !(get) 
+               
       - name: Pushing to production branch
         uses: actions-js/push@master
         with:
