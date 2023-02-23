@@ -70,11 +70,7 @@ class createPools {
   }
 
   toDeskop() {
-    fs.writeFileSync(
-      `./airport`,
-      JSON.stringify(this.text),
-      'utf-8'
-    );
+    fs.writeFileSync( `./airport`, this.text, 'utf-8' );
     console.log('写入成功:');
   }
 }
