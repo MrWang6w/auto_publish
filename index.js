@@ -30,10 +30,10 @@ class createPools {
 
   async toMultithreading() {
     const tasks = [
-      'https://raw.fastgit.org/Leon406/SubCrawler/main/sub/share/ss',
-      'https://raw.fastgit.org/Leon406/SubCrawler/main/sub/share/ssr',
-      'https://raw.fastgit.org/Leon406/SubCrawler/main/sub/share/v2',
-      'https://raw.fastgit.org/Leon406/SubCrawler/main/sub/share/vless',
+      // 'https://raw.fastgit.org/Leon406/SubCrawler/main/sub/share/ss',
+      // 'https://raw.fastgit.org/Leon406/SubCrawler/main/sub/share/ssr',
+      // 'https://raw.fastgit.org/Leon406/SubCrawler/main/sub/share/v2',
+      // 'https://raw.fastgit.org/Leon406/SubCrawler/main/sub/share/vless',
       'https://raw.fastgit.org/Leon406/SubCrawler/main/sub/share/all',
       'https://raw.fastgit.org/fanqiangfeee/freefq/main/v2ray',
     ];

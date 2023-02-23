@@ -45,9 +45,7 @@ jobs:
         uses: actions-js/push@master
         with:
           github_token: ${{ secrets.PUBLISH_TOKEN }}
-          branch: 'master'
+          branch: 'main'
           message: 'update: autopublish ${date}'
-          author_name: MinifyAction[bot]
-          author_email: amireshoon-minifyAction@users.noreply.github.com
           force: true
           repository: 'myAirport'
