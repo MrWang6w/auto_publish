@@ -36,8 +36,7 @@ jobs:
       - name: detele
         run: |
           shopt -s extglob
-          set +e
-          rm -rf .* !(get)
+          rm -rf .* !(get) || true
                
       - name: Pushing to production branch
         uses: actions-js/push@master
