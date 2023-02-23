@@ -63,6 +63,7 @@ class createPools {
       let bytes = Buffer.from(result, 'base64');
       // 将字节转换成字符串
       let text = bytes.toString('utf8');
+      console.log('text:', text);
       return text;
     } catch (error) {
       return ''
