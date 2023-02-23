@@ -44,7 +44,7 @@ jobs:
            commit_message: 'update: autopublish ${date}'
            branch: 'main'
            file_pattern: 'airport'
-           repository: 'MrWang6w/myAirport'
+           repository: 'https://github.com/MrWang6w/myAirport'
            skip_dirty_check: true
            create_branch: true
 
