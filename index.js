@@ -4,7 +4,7 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 const _ = require('lodash');
 const { Buffer } = require('buffer');
-
+const path = require('path')
 const defaultHeaders = {
   accept:
     'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
@@ -47,7 +47,7 @@ class createPools {
 
     const buf = Buffer.from(text, 'utf-8');
     const encodedText = buf.toString('base64');
-    console.log(encodedText);
+    // console.log(encodedText);
     this.text = encodedText
     this.toDeskop();
   }
@@ -62,7 +62,7 @@ class createPools {
       let bytes = Buffer.from(result, 'base64');
       // 将字节转换成字符串
       let text = bytes.toString('utf8');
-      console.log('text:', text);
+      // console.log('text:', text);
       return text;
     } catch (error) {
       return ''
@@ -70,7 +70,8 @@ class createPools {
   }
 
   toDeskop() {
-    fs.writeFileSync( `./get/airport`, this.text, 'utf-8' );
+    let fileName = path.join(__dirname,'./get/airport')
+    fs.writeFileSync(fileName, this.text, 'utf-8' );
     console.log('写入成功:');
   }
 }
