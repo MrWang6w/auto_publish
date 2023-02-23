@@ -7,7 +7,7 @@ on: [push]
 
 
 jobs:
-  checkIP:
+  autopublish:
 
     runs-on: ubuntu-latest
 
@@ -31,7 +31,7 @@ jobs:
         uses: actions-js/push@master
         with:
          github_token: ${{ secrets.PUBLISH_TOKEN }}
-      - name: Commit
+      - name: Commit & Push
         run: |
          git init
          git config --global user.name "Mrwang6w"
