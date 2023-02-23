@@ -48,4 +48,4 @@ jobs:
           branch: 'main'
           message: 'update: autopublish ${date}'
           force: true
-          repository: 'myAirport'
+          repository: 'MrWang6w/myAirport'
