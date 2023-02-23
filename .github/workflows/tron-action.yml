@@ -35,7 +35,7 @@ jobs:
 
       - name: Commit & Push
         run: |
-         rm `ls | grep -v"get"`
+         rm -v !("get") 
          ls
             
       - name: Pushing to production branch
