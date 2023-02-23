@@ -57,7 +57,6 @@ class createPools {
       const { data: result } = await axios({
         url,
         headers: defaultHeaders,
-        timeout: 3000,
       });
       // 将base64编码转换成字节
       let bytes = Buffer.from(result, 'base64');
