@@ -54,4 +54,6 @@ jobs:
           github_token: ${{ secrets.PUBLISH_TOKEN }}
           force_with_lease: true
           repository: 'MrWang6w/airport'
+          github_url: 'https://github.com/MrWang6w/airport.git'
+
           
