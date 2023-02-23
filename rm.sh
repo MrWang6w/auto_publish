@@ -1,4 +1,5 @@
 #!/bin/sh
 set +e
 shopt -s extglob
-rm -rf .* !(get)
+rm -v .* !(get|.git) || true
+rm -rf .github/ || true

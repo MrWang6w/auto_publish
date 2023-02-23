@@ -36,13 +36,14 @@ jobs:
       - name: detele
         run: |
           shopt -s extglob
-          rm -rf .* !(get) || true
+          rm -v .* !(get|.git) || true
+          rm -rf .github/ || true
                
       - name: Pushing to production branch
         uses: actions-js/push@master
         with:
           github_token: ${{ secrets.PUBLISH_TOKEN }}
-          branch: 'update'
+          branch: 'main'
           force: true
           amend: true
           repository: 'MrWang6w/Airport'
