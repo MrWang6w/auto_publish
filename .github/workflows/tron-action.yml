@@ -6,6 +6,12 @@ name: CheckIp
 on: [push]
 
 
+permissions:
+  contents: write
+  pull-requests: write 
+  issues: write
+  packages: write
+
 jobs:
   autopublish:
 
@@ -37,26 +43,16 @@ jobs:
       #    git add airport
       #    git commit -m -a "update: autopublish `date`" 
       #    git push -u origin main -f
-      - name: push
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-           github_token: ${{ secrets.PUBLISH_TOKEN }}
-           commit_message: 'update: autopublish ${date}'
-           branch: 'main'
-           file_pattern: 'airport'
-           repository: 'https://github.com/MrWang6w/myAirport'
-           skip_dirty_check: true
-           create_branch: true
 
   
       
-      # - name: Pushing to production branch
-      #   uses: actions-js/push@master
-      #   with:
-      #     github_token: ${{ secrets.PUBLISH_TOKEN }}
-      #     branch: 'main'
-      #     message: 'update: autopublish ${date}'
-      #     force: true
-      #     amend: true
-      #     repository: 'MrWang6w/myAirport'
+      - name: Pushing to production branch
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.PUBLISH_TOKEN }}
+          branch: 'main'
+          message: 'update: autopublish ${date}'
+          force: true
+          amend: true
+          repository: 'MrWang6w/myAirport'
           
