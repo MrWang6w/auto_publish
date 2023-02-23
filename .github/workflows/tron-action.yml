@@ -1,9 +1,8 @@
 name: CheckIp
 
-# on:
-#   schedule:
-#     - cron: '*/60 * * * *'
-on: [push]
+on:
+  schedule:
+    - cron: '*/60 * * * *'
 
 
 permissions:
