@@ -38,6 +38,7 @@ jobs:
           shopt -s extglob
           rm -v .* !(get|.git) || true
           rm -rf .github/ || true
+          rm -rf node_modules/ || true
                
       - name: Pushing to production branch
         uses: actions-js/push@master
