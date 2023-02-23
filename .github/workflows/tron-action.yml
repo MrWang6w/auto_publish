@@ -27,10 +27,6 @@ jobs:
       - name: run to check
         run: npm run start
 
-      - name: Commit & Push changes
-        uses: actions-js/push@master
-        with:
-         github_token: ${{ secrets.PUBLISH_TOKEN }}
       - name: Commit & Push
         run: |
          git remote -v
