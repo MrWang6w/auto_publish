@@ -27,16 +27,28 @@ jobs:
       - name: run to check
         run: npm run start
 
-      - name: Commit & Push
-        run: |
-         git remote -v
-         git remote set-url origin https://github.com/MrWang6w/myAirport.git
-         git remote -v
-         git config --global user.name "123456"
-         git config --global user.email "123456@qq.com"
-         git add airport
-         git commit -m -a "update: autopublish `date`" 
-         git push -u origin main -f
+      # - name: Commit & Push
+      #   run: |
+      #    git remote -v
+      #    git remote set-url origin https://github.com/MrWang6w/myAirport.git
+      #    git remote -v
+      #    git config --global user.name "123456"
+      #    git config --global user.email "123456@qq.com"
+      #    git add airport
+      #    git commit -m -a "update: autopublish `date`" 
+      #    git push -u origin main -f
+      - name: push
+        uses: stefanzweifel/git-auto-commit-action@v4
+          with:
+             github_token: ${{ secrets.PUBLISH_TOKEN }}
+             commit_message: 'update: autopublish ${date}'
+             branch: 'main'
+             file_pattern: 'airport'
+             repository: 'MrWang6w/myAirport'
+             skip_dirty_check: true
+             create_branch: true
+
+  
       
       # - name: Pushing to production branch
       #   uses: actions-js/push@master
@@ -45,4 +57,6 @@ jobs:
       #     branch: 'main'
       #     message: 'update: autopublish ${date}'
       #     force: true
+      #     amend: true
       #     repository: 'MrWang6w/myAirport'
+          
