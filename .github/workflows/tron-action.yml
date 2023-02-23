@@ -33,13 +33,25 @@ jobs:
       - name: run to check
         run: npm run start
 
-
+      - name: Commit & Push
+        run: |
+         git config --local user.email "github-actions[bot]@users.noreply.github.com"
+         git config --local user.name "github-actions[bot]"
+         git add airport
+         git commit -m -a "update: autopublish `date`" 
+            
       - name: Pushing to production branch
         uses: actions-js/push@master
         with:
           github_token: ${{ secrets.PUBLISH_TOKEN }}
           branch: 'main'
           force: true
-          repository: 'MrWang6w/airport'
-          directory: "airport"
+          repository: 'MrWang6w/myAirport'
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.PUBLISH_TOKEN }}
+          force_with_lease: true
+          repository: 'MrWang6w/myAirport'
           
