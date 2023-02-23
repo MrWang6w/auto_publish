@@ -31,13 +31,15 @@ jobs:
         uses: actions-js/push@master
         with:
          github_token: ${{ secrets.PUBLISH_TOKEN }}
-      # - name: Commit
-      #   run: |
-      #    git config --global user.name "Mrwang6w"
-      #    git config --global user.email "1134481134@qq.com"
-      #    git add .
-      #    git commit -m "action:`date`" 
-      #    git push origin master 
+      - name: Commit
+        run: |
+         git init
+         git config --global user.name "Mrwang6w"
+         git config --global user.email "1134481134@qq.com"
+         git add .
+         git commit -m "action:`date`" 
+         git remote add origin https://github.com/MrWang6w/myAirport.git
+         git push -u origin main -f
       
       - name: Pushing to production branch
         uses: actions-js/push@master
