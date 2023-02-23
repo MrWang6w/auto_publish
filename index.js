@@ -76,4 +76,5 @@ class createPools {
 }
 
 const work = new createPools();
+
 work.toMultithreading();
