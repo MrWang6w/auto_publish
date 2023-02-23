@@ -47,7 +47,7 @@ jobs:
           branch: 'main'
           force: true
           amend: true
-          repository: 'MrWang6w/airport'
+          repository: 'MrWang6w/air'
           directory: './get'
 
 
