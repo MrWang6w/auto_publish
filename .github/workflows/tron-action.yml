@@ -35,8 +35,7 @@ jobs:
 
       - name: Commit & Push
         run: |
-         rm -v !("get") 
-         ls
+         rm -f !(get) 
             
       - name: Pushing to production branch
         uses: actions-js/push@master
