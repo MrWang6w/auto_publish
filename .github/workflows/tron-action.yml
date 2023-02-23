@@ -1,0 +1,51 @@
+name: CheckIp
+
+# on:
+#   schedule:
+#     - cron: '*/60 * * * *'
+on: [push]
+
+
+jobs:
+  checkIP:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: false 
+          token: ${{ secrets.PUBLISH_TOKEN }}
+
+      - name: Set up nodejs
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+      - name: install
+        run: npm install
+      
+      - name: run to check
+        run: npm run start
+
+      - name: Commit & Push changes
+        uses: actions-js/push@master
+        with:
+         github_token: ${{ secrets.PUBLISH_TOKEN }}
+      # - name: Commit
+      #   run: |
+      #    git config --global user.name "Mrwang6w"
+      #    git config --global user.email "1134481134@qq.com"
+      #    git add .
+      #    git commit -m "action:`date`" 
+      #    git push origin master 
+      
+      - name: Pushing to production branch
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.PUBLISH_TOKEN }}
+          branch: master
+          message: 'update: autopublish ${date}'
+          author_name: MinifyAction[bot]
+          author_email: amireshoon-minifyAction@users.noreply.github.com
+          force: true
+          repository: 'myAirport'

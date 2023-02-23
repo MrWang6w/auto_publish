@@ -1,5 +1,5 @@
 {
-  "name": "ip_pools",
+  "name": "to_filter",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,6 +13,7 @@
     "axios": "^1.3.3",
     "cheerio": "^1.0.0-rc.12",
     "lodash": "^4.17.21",
+    "tronweb": "^5.1.0",
     "tunnel": "0.0.6"
   }
 }
