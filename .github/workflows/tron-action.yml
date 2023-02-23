@@ -46,12 +46,12 @@ jobs:
           github_token: ${{ secrets.PUBLISH_TOKEN }}
           branch: 'main'
           force: true
-          repository: 'MrWang6w/myAirport'
+          repository: 'MrWang6w/airport'
 
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.PUBLISH_TOKEN }}
           force_with_lease: true
-          repository: 'MrWang6w/myAirport'
+          repository: 'MrWang6w/airport'
           
