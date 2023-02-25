@@ -70,7 +70,7 @@ class createPools {
   }
 
   toDeskop() {
-    let fileName = path.join(__dirname,'./get/airport')
+    let fileName = path.join(__dirname,'./get/airport.txt')
     fs.writeFileSync(fileName, this.text, 'utf-8' );
     console.log('写入成功:');
   }
